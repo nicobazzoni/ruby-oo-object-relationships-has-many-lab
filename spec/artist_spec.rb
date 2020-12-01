@@ -3,6 +3,7 @@ require "spec_helper"
 describe "Artist" do
 
   let!(:adele) { Artist.new("Adele") }
+  
 
     describe "#new" do
       it "is initialized with a name" do
@@ -21,6 +22,7 @@ describe "Artist" do
         expect(adele.songs).to be_a(Array)
         hello = Song.new("Hello")
         hello.artist = adele
+        
         expect(adele.songs).to eq([hello])
       end
     end
